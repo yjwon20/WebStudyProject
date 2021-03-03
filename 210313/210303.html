@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title> Finding Number </title>
+	<link rel="stylesheet" href="210303.css">
+</head>
+<body>
+	<h1> 과제 1 - 번호 찾기 게임 </h1>
+	<button id="plus"> 더하기 </button> <br><br>
+	<button id="minus"> 빼기 </button> <br><br>
+	<button id="multi"> 곱하기 </button> <br><br>
+
+	<script>
+		function print(M, N){
+			var k = Math.floor(Math.random() * (M*N-1))+1;
+			var result = "<table>";
+	 		result += "<caption>"+M+" * "+N+" Table </caption>"
+		    for(var i = 1; i <= N; i++) {
+		       for(var j=1; j <= M; j++) {
+		           result += "<td width=50 height=60 align=middle>";
+		           result += ( i * j + k) + "<br>";
+		           result += "</font></td>";
+		       }
+		       result += "</tr>";
+		    }
+		 
+		    result += "</table>";
+
+		    document.writeln( result );
+		    document.writeln( "k is "+k );
+		}
+
+		function plus() {
+			const M = prompt('M을 입력하세요');
+			const N = prompt('N을 입력하세요');
+			print(M, N);
+		}
+		document.getElementById("plus").addEventListener("click", plus);
+
+	</script>
+
+	<script>
+	    
+	</script>
+
+</body>
+</html>
